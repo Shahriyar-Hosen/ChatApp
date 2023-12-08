@@ -47,5 +47,3 @@ If everything is set up _correctly_, you should see your new app running in your
 This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
 
 ## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
