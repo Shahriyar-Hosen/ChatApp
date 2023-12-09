@@ -33,9 +33,3 @@ yarn android
 ```
 
 ### For iOS
-
-```bash
-# using npm
-npm run ios
-
-```
