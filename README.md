@@ -17,5 +17,3 @@ npm start
 # OR using Yarn
 yarn start
 ```
-
-## Step 2: Start your Application
