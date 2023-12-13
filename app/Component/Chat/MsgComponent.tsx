@@ -7,9 +7,9 @@ import {TimeDelivery} from './TimeDelivery';
 
 export interface IMsgComponent {
   sender: any;
-  massage: any;
+  massage: string;
   item: any;
-  sendTime: any;
+  sendTime?: any;
 }
 
 export const MsgComponent: FC<IMsgComponent> = ({sender, item}) => {
