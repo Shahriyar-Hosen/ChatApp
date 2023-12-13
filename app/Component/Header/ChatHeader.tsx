@@ -11,7 +11,7 @@ export interface IChatHeader {
   data: any;
 }
 
-const ChatHeader: FC<IChatHeader> = ({data}) => {
+export const ChatHeader: FC<IChatHeader> = ({data}) => {
   // console.log("cht saa",data);
 
   // const [lastSeen, setlastSeen] = useState('');
@@ -75,6 +75,3 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
-
-//make this component available to the app
-export default ChatHeader;
