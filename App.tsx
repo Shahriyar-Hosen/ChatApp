@@ -5,16 +5,16 @@
  * @format
  */
 
+import type {FC, PropsWithChildren} from 'react';
 import React from 'react';
-import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
   Text,
-  useColorScheme,
   View,
+  useColorScheme,
 } from 'react-native';
 
 import {
@@ -55,7 +55,7 @@ function Section({children, title}: SectionProps): JSX.Element {
   );
 }
 
-function App(): JSX.Element {
+const App: FC = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -94,7 +94,7 @@ function App(): JSX.Element {
       </ScrollView>
     </SafeAreaView>
   );
-}
+};
 
 const styles = StyleSheet.create({
   sectionContainer: {
