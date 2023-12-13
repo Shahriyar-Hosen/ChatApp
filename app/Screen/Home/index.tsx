@@ -1,11 +1,11 @@
+/* eslint-disable react-native/no-inline-styles */
 import {Container, Icon} from 'native-base';
 import React from 'react';
-import { FlatList, StatusBar, StyleSheet, TouchableOpacity} from 'react-native';
-import {ListItem, Avatar} from 'react-native-elements';
-import {COLORS} from '../../Component/Constant/Color';
-import { FONTS } from '../../Component/Constant/Font';
-import HomeHeader from '../../Component/Header/HomeHeader';
-import Navigation from '../../Service/Navigation';
+import {FlatList, StatusBar, StyleSheet, TouchableOpacity} from 'react-native';
+import {Avatar, ListItem} from 'react-native-elements';
+import {COLORS, FONTS} from '../../Component/Constant';
+import {HomeHeader} from '../../Component/Header';
+import {Navigation} from '../../Service/Navigation';
 
 const listData = [
   {
@@ -30,7 +30,8 @@ const listData = [
     name: 'Tom Holland',
     avatar_url:
       'https://static.toiimg.com/thumb.cms?msid=80482429&height=600&width=600',
-    subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    subtitle:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
   },
   {
     name: 'Robert',
@@ -54,7 +55,8 @@ const listData = [
     name: 'Chris Jackson',
     avatar_url:
       'https://images.pexels.com/photos/3748221/pexels-photo-3748221.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    subtitle: ' If you use this site regularly and would like to help keep the site',
+    subtitle:
+      'If you use this site regularly and would like to help keep the site',
   },
   {
     name: 'Jenifar Lawrence',
@@ -66,28 +68,33 @@ const listData = [
     name: 'Tom Holland',
     avatar_url:
       'https://static.toiimg.com/thumb.cms?msid=80482429&height=600&width=600',
-    subtitle: ' If you use this site regularly and would like to help keep the site',
+    subtitle:
+      ' If you use this site regularly and would like to help keep the site',
   },
 ];
 
 const Home = () => {
   const renderItem = ({item}) => (
-    <ListItem 
-    // bottomDivider 
-    // activeOpacity={1}
-    containerStyle={{paddingVertical:8,marginVertical:0}}
-    onPress={()=>Navigation.navigate('SingleChat',{data:item})}>
-      <Avatar 
-      source={{uri: item.avatar_url}} 
-      rounded
-      title={item.name}
-      size="medium" />
+    <ListItem
+      // bottomDivider
+      // activeOpacity={1}
+      containerStyle={{paddingVertical: 8, marginVertical: 0}}
+      onPress={() =>
+        Navigation.navigate('SingleChat', {data: item} as unknown as undefined)
+      }>
+      <Avatar
+        source={{uri: item.avatar_url}}
+        rounded
+        title={item.name}
+        size="medium"
+      />
       <ListItem.Content>
-        <ListItem.Title style={{fontFamily:FONTS.Medium,fontSize:14}}>
-           {item.name}
+        <ListItem.Title style={{fontFamily: FONTS.Medium, fontSize: 14}}>
+          {item.name}
         </ListItem.Title>
-        <ListItem.Subtitle 
-        style={{fontFamily:FONTS.Regular,fontSize:12}}  numberOfLines={1}>
+        <ListItem.Subtitle
+          style={{fontFamily: FONTS.Regular, fontSize: 12}}
+          numberOfLines={1}>
           {item.subtitle}
         </ListItem.Subtitle>
       </ListItem.Content>
@@ -104,14 +111,14 @@ const Home = () => {
         data={listData}
         renderItem={renderItem}
       />
-      <TouchableOpacity 
-      style={styles.but}
-      onPress={()=>Navigation.navigate('AllUser')}>
-          <Icon 
-              name="users"
-              type="FontAwesome5"
-              style={{color:COLORS.white,fontSize:20}}
-          />
+      <TouchableOpacity
+        style={styles.but}
+        onPress={() => Navigation.navigate('AllUser')}>
+        <Icon
+          name="users"
+          type="FontAwesome5"
+          style={{color: COLORS.white, fontSize: 20}}
+        />
       </TouchableOpacity>
     </Container>
   );

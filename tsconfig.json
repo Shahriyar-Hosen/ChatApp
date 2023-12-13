@@ -1,4 +1,8 @@
 {
+  "include": [
+    "src",
+    "node_modules/react-native-keyboard-aware-scroll-view"
+  ],
   "extends": "@tsconfig/react-native/tsconfig.json",
   "compilerOptions": {
     "types": [
