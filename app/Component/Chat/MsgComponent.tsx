@@ -1,4 +1,3 @@
-// import moment from 'moment';
 import React, {FC} from 'react';
 import {Pressable, StyleSheet, Text, View} from 'react-native';
 
@@ -9,7 +8,6 @@ export interface IMsgComponent {
   sender: any;
   massage: string;
   item: any;
-  sendTime?: any;
 }
 
 export const MsgComponent: FC<IMsgComponent> = ({sender, item}) => {
@@ -23,7 +21,6 @@ export const MsgComponent: FC<IMsgComponent> = ({sender, item}) => {
           styles.masBox,
           {
             alignSelf: sender ? 'flex-end' : 'flex-start',
-            // borderWidth:1,
             backgroundColor: sender ? COLORS.theme : COLORS.white,
           },
         ]}>
@@ -64,7 +61,6 @@ const styles = StyleSheet.create({
     width: 100,
     justifyContent: 'center',
     alignItems: 'center',
-    // backgroundColor: COLORS.white,
     borderRadius: 30,
     marginTop: 10,
   },
@@ -74,22 +70,18 @@ const styles = StyleSheet.create({
     borderRadius: 21,
     alignItems: 'center',
     justifyContent: 'center',
-    // backgroundColor: COLORS.themecolor,
   },
   TriangleShapeCSS: {
     position: 'absolute',
-    // top: -3,
     width: 0,
     height: 0,
-    // borderBottomLeftRadius:5,
     backgroundColor: 'transparent',
     borderStyle: 'solid',
     borderLeftWidth: 15,
     borderRightWidth: 5,
     borderBottomWidth: 20,
     borderLeftColor: 'transparent',
-    borderRightColor: 'transparent',
-    // borderBottomColor: '#757474'
+    borderRightColor: 'transparent'
   },
   left: {
     borderBottomColor: COLORS.white,
@@ -100,7 +92,6 @@ const styles = StyleSheet.create({
   right: {
     borderBottomColor: COLORS.theme,
     right: 2,
-    // top:0,
     bottom: 5,
     transform: [{rotate: '103deg'}],
   },

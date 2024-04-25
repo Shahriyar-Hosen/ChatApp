@@ -12,9 +12,6 @@ export interface IChatHeader {
 }
 
 export const ChatHeader: FC<IChatHeader> = ({data}) => {
-  // console.log("cht saa",data);
-
-  // const [lastSeen, setlastSeen] = useState('');
 
   return (
     <View style={styles.container}>
@@ -45,22 +42,7 @@ export const ChatHeader: FC<IChatHeader> = ({data}) => {
           }}>
           {data.name}
         </Text>
-
-        {/* <Text
-                    style={{ color: COLORS.primaryBackground, fontSize: 10,fontFamily: FONTS.Regular }}
-                >
-                    {lastSeen}
-                </Text> */}
       </View>
-
-      {/* <Icon
-                style={{
-                    marginHorizontal: 10,
-                    color: COLORS.themeColor
-                }}
-                name="videocam-outline"
-                type="Ionicons"
-            /> */}
     </View>
   );
 };
