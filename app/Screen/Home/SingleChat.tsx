@@ -11,14 +11,11 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-// import ChatHeader from '../../Component/Header/ChatHeader';
-// import { COLORS } from '../../Component/Constant'
-// import Toast from 'react-native-simple-toast';
 import {MsgComponent} from '../../Component/Chat';
 import {COLORS} from '../../Component/Constant/Color';
 import {ChatHeader} from '../../Component/Header';
-// create a component
 
+// create a component
 const Data = [
   {
     massage: 'Yes Ofcourse..',
@@ -74,8 +71,8 @@ const SingleChat = props => {
   // console.log("token",token)
 
   const [msg, setMsg] = React.useState('');
-  const [disabled, setDisabled] = React.useState(false);
-  const [update, setUpdate] = React.useState(false);
+  const [disabled] = React.useState(false);
+  const [setUpdate] = React.useState(false);
   const [allChat, setAllChat] = React.useState([]);
 
   return (
